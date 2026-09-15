@@ -37,8 +37,24 @@
       margin: 0 auto;
       padding: 4rem 1.5rem;
     }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    @media (max-width: 480px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
     h1 { margin: 0; font-size: 2rem; }
-    .role { margin: 0.25rem 0 2rem; color: var(--muted); }
+    .role { margin: 0.25rem 0 0; color: var(--muted); }
     p { margin: 0 0 1rem; }
     .collab {
       margin: 2rem 0;
@@ -67,8 +83,13 @@
 </head>
 <body>
   <main>
-    <h1>Dr Anne Baranger</h1>
-    <p class="role">Forest ecologist · Postdoctoral Research Associate, Lines Research Group</p>
+    <header>
+      <img src="anne-baranger.jpg" alt="Anne Baranger in the snowy Alps">
+      <div>
+        <h1>Dr Anne Baranger</h1>
+        <p class="role">Forest ecologist · Postdoctoral Research Associate, Lines Research Group</p>
+      </div>
+    </header>
 
     <p>
       My research focuses on how European forests respond to climate change. I currently combine
