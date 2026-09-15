@@ -83,7 +83,7 @@
 
     <div class="collab">
       <p><strong>Open to collaboration.</strong> If you are interested in working together, please
-      get in touch at <a href="mailto:annebarang@gmail.com">annebarang@gmail.com</a>.</p>
+      get in touch at <span class="email">amob2 (at) cam.ac.uk</span>.</p>
     </div>
 
     <h2>Links</h2>
@@ -92,8 +92,18 @@
       <li><a class="link" href="https://orcid.org/0000-0001-6929-6362">ORCID<span>0000-0001-6929-6362</span></a></li>
       <li><a class="link" href="https://www.linesresearchgroup.com/dr-anne-baranger/">Lines Research Group<span>Profile page</span></a></li>
       <li><a class="link" href="https://www.linkedin.com/in/anne-baranger-787765134/">LinkedIn<span>Professional profile</span></a></li>
-      <li><a class="link" href="mailto:annebarang@gmail.com">Email<span>annebarang@gmail.com</span></a></li>
+      <li class="email-link"><div class="link">Email<span>amob2 (at) cam.ac.uk</span></div></li>
     </ul>
   </main>
+  <script>
+    // Build the address in the browser so it isn't written in the HTML for spam bots.
+    const address = ["amob2", "cam.ac.uk"].join("@");
+    document.querySelectorAll(".email").forEach((el) => {
+      el.innerHTML = '<a href="mailto:' + address + '">' + address + "</a>";
+    });
+    document.querySelectorAll(".email-link").forEach((el) => {
+      el.innerHTML = '<a class="link" href="mailto:' + address + '">Email<span>' + address + "</span></a>";
+    });
+  </script>
 </body>
 </html>
